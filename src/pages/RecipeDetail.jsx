@@ -19,9 +19,7 @@ const RecipeDetail = () => {
   };
 
   useEffect(() => {
-    console.log(id);
     searchRecipeDetails().then((res) => {
-      console.log(res);
       setRecipeDetails(res);
     });
   }, []);
@@ -34,7 +32,7 @@ const RecipeDetail = () => {
           <div className="col-lg-12">
             {recipeDetails.id ? (
               <>
-                <a href="/">Back</a>
+                <a href="/SearchRecipes">Back</a>
                 <h1 className="mb-30">{recipeDetails.title}</h1>
                 <RecipeDetailComp recipeDetails={recipeDetails} />
                 <IngredientsComp recipeDetails={recipeDetails} />
